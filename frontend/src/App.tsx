@@ -27,14 +27,99 @@ const queryClient = new QueryClient({
   },
 });
 
-// Create theme
+// Create modern theme
 const theme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
-      main: '#1976d2',
+      main: '#2563eb', // Modern blue
+      light: '#3b82f6',
+      dark: '#1d4ed8',
     },
     secondary: {
-      main: '#dc004e',
+      main: '#7c3aed', // Modern purple
+      light: '#8b5cf6',
+      dark: '#6d28d9',
+    },
+    success: {
+      main: '#10b981',
+      light: '#34d399',
+      dark: '#059669',
+    },
+    warning: {
+      main: '#f59e0b',
+      light: '#fbbf24',
+      dark: '#d97706',
+    },
+    error: {
+      main: '#ef4444',
+      light: '#f87171',
+      dark: '#dc2626',
+    },
+    background: {
+      default: '#f8fafc',
+      paper: '#ffffff',
+    },
+    text: {
+      primary: '#1e293b',
+      secondary: '#64748b',
+    },
+  },
+  typography: {
+    fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      fontWeight: 700,
+      fontSize: '2.5rem',
+    },
+    h2: {
+      fontWeight: 600,
+      fontSize: '2rem',
+    },
+    h3: {
+      fontWeight: 600,
+      fontSize: '1.5rem',
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: '1.25rem',
+    },
+    h5: {
+      fontWeight: 600,
+      fontSize: '1.125rem',
+    },
+    h6: {
+      fontWeight: 600,
+      fontSize: '1rem',
+    },
+  },
+  shape: {
+    borderRadius: 12,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontWeight: 600,
+          borderRadius: 8,
+          padding: '10px 20px',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+          borderRadius: 12,
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+        },
+      },
     },
   },
 });
